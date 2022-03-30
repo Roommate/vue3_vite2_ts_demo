@@ -4,7 +4,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
+    path: '/login',
     name: 'Login',
     component: () => import('@/pages/login/Login.vue'), // 注意这里要带上 文件后缀.vue
     // title: string; 页面标题，通常必选。
@@ -17,6 +17,33 @@ const routes: RouteRecordRaw[] = [
     // order ?: number; 菜单排序。
     // frameUrl ?: string; 嵌套外链。
 
+  },
+  {
+    path: '/',
+    name: 'main',
+    component: () => import('@/pages/mainPlatform/index.vue'), // 注意这里要带上 文件后缀.vue
+    children: [
+      {
+        path: '/login1',
+        name: 'Login1',
+        component: () => import('@/pages/login/Login.vue'), // 注意这里要带
+      },
+      {
+        path: '/login2',
+        name: 'Login2',
+        component: () => import('@/pages/login/Login.vue'), // 注意这里要带
+      },
+      {
+        path: '/login3',
+        name: 'Login3',
+        component: () => import('@/pages/login/Login.vue'), // 注意这里要带
+      },
+      {
+        path: '/login4',
+        name: 'Login4',
+        component: () => import('@/pages/login/Login.vue'), // 注意这里要带
+      },
+    ]
   },
 ]
 
