@@ -19,5 +19,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .warp {
   height: 60px;
+  background: #ddd;
 }
 </style>

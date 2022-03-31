@@ -88,7 +88,4 @@ export default defineComponent({
 .form {
   margin: 30px;
 }
-.test {
-  color: $test-color;
-}
 </style>
