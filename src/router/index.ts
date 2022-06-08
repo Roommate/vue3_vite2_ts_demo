@@ -24,9 +24,9 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/pages/mainPlatform/index.vue'), // 注意这里要带上 文件后缀.vue
     children: [
       {
-        path: '/login1',
-        name: 'Login1',
-        component: () => import('@/pages/login/Login.vue'), // 注意这里要带
+        path: '/',
+        name: 'main',
+        component: () => import('@/pages/main/index.vue'), // 注意这里要带
       },
       {
         path: '/login2',
